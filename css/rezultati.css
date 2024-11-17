@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 80%;
+    margin: 30px auto;
+    overflow: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: rgb(233, 233, 233);
+}
+.banner {
+    width: 100%;
+    background-size: cover; /* Ensures the background scales well if used directly on banner */
+    margin-bottom: 10px;
+}
+
+.banner img {
+    width: 100%;  /* Makes the image take the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+}
+.header {
+    width: 100%;
+    height: 35px;
+    background-color: rgb(52, 58, 64);
+    line-height: 35px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+h5 {
+    height: 100%;
+    padding-left: 5px;
+}
+
+.container-rs7 {
+    height: fit-content;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.box-rs7 {
+    height: 200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.col-slika {
+    height: 100%;
+    width: 25%;
+    padding-left: 10px;
+    align-content: center;
+}
+
+.col-info {
+    height: 190px;
+    width: 54%;
+    padding-top: 10px;
+}
+
+.col-cena {
+    height: 100%;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+}
+
+h6 {
+    height: 50px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 19px;
+    color: rgb(6, 47, 114);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 77%;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+}
+
+.info-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.info-table td:first-child {
+    font-weight: bold;
+}
+
+.colored {
+    background-color: #eeeeee;
+}
+
+@media(max-width: 1300px) {
+    .info-table {
+        width: 80%;
+    }
+}
+
+@media(max-width: 1125px) {
+    .info-table {
+        width: 70%;
+        height: 80%;
+        font-size: 12px;
+    }
+
+
+
+    .col-slika {
+        height: 100%;
+        width: 25%;
+        padding-left: 10px;
+        align-content: center;
+    }
+
+    .col-info {
+        height: 190px;
+        width: 60%;
+        padding-top: 10px;
+    }
+
+    .col-cena {
+        height: 100%;
+        width: 13%;
+    }
+
+    .info-table td {
+        padding: 5px;
+    }
+
+    h6 {
+        height: 50px;
+        line-height: 200px;
+        text-align: center;
+        font-size: 15px;
+        color: rgb(6, 47, 114);
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 965px) {
+    .col-slika {
+        height: 100%;
+        width: 22%;
+        padding-left: 10px;
+        align-content: center;
+    }
+
+    img {
+        height: 60%;
+    }
+}
+
+@media(max-width: 840px) {
+    .box-rs7 {
+        display: block;
+    }
+
+    .container-rs7 {
+        height: 380px;
+    }
+
+
+    .col-slika {
+        height: 100px;
+        width: 100%;
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .col-info {
+        height: 160px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .col-cena {
+        height: 50px;
+        width: 100%;
+    }
+
+    
+
+    img {
+        height: 100%;
+    }
+
+    h6 {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(6, 47, 114);
+        font-weight: bold;
+    }
+}
+
+.obvestilo{
+    height: 30px;
+    width: 90%;
+    font-size: 14px;
+    color: rgb(129, 129, 130);
+    border-radius: 5px;
+    background-color: white;
+    margin: 20px auto;
+    box-shadow: px rgb(129, 129, 130);;
+}
+h4{
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}

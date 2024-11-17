@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+  <title>www.Avto.net</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="images/avtonet_favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="icons/icons.css">
+
+  <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+</head>
+
+<body>
+  <div class="all">
+    <form id="iskanje-avtomobilov">
+      <div class="container-tip-ponudbe">
+        <div class="header">
+          <h5>Tip Ponudbe</h5>
+        </div>
+        <div class="box-tip-ponudbe">
+          <div class="col-prodaja">
+            <label class="custom-radio-btn" for="prodaja">prodaja
+              <input type="radio" value="prodaja" id="prodaja" name="tip-ponudbe" checked>
+              <span class="checkmark-1"></span>
+            </label>
+          </div>
+          <div class="col-najem">
+            <label class="custom-radio-btn" for="najem">najem
+              <input type="radio" value="najem" id="najem" name="tip-ponudbe">
+              <span class="checkmark-1"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-starost">
+        <div class="header">
+          <h5>Starost</h5>
+        </div>
+        <div class="box-starost">
+          <div class="col-novo">
+            <label class="custom-checkbox-btn" for="novo">novo
+              <input type="checkbox" value="novo" id="novo" checked>
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-testno">
+            <label class="custom-checkbox-btn" for="testno">testno
+              <input type="checkbox" value="testno" id="testno" checked>
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-rabljeno">
+            <label class="custom-checkbox-btn" for="staro">rabljeno
+              <input type="checkbox" value="staro" id="staro" checked>
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-karoserijska-izvedba">
+        <div class="header">
+          <h5>Karoserijska izvedba</h5>
+        </div>
+        <div class="box-karoserijska-izvedba-1">
+          <div class="col-limuzina">
+            <label class="custom-checkbox-btn" for="limuzina"><img src="icons/limuzina-icon.png"
+                alt="ikona limuzine">Limuzina
+              <input type="checkbox" value="limuzina" id="limuzina">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+          <div class="col-kombilimuzina">
+            <label class="custom-checkbox-btn" for="kombilimuzina"><img src="icons/kombilimuzina-icon.png"
+                alt="ikona kombilimuzine">Kombilimuzina
+              <input type="checkbox" value="kombilimuzina" id="kombilimuzina">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+          <div class="col-karavan">
+            <label class="custom-checkbox-btn" for="karavan"><img src="icons/karavan-icon.png"
+                alt="ikona karavana">Karavan
+              <input type="checkbox" value="karavan" id="karavan">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-karoserijska-izvedba-2">
+          <div class="col-enoprostorec">
+            <label class="custom-checkbox-btn" for="enoprostorec"><img src="icons/enoprostorec-icon.png"
+                alt="ikona enoprostorca">Enoprostorec
+              <input type="checkbox" value="enoprostorec" id="enoprostorec">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+          <div class="col-coupe">
+            <label class="custom-checkbox-btn" for="coupe"><img src="icons/coupe-icon.png" alt="ikona coupeja">Coupe
+              <input type="checkbox" value="coupe" id="coupe">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+          <div class="col-cabrio">
+            <label class="custom-checkbox-btn" for="cabrio"><img src="icons/cabrio-icon.png" alt="ikona cabria">Cabrio
+              <input type="checkbox" value="cabrio" id="cabrio">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-karoserijska-izvedba-3">
+          <div class="col-suv">
+            <label class="custom-checkbox-btn" for="suv"><img src="icons/SUV-icon.png" alt="ikona SUV-ja">SUV
+              <input type="checkbox" value="suv" id="suv">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+          <div class="col-pick-up">
+            <label class="custom-checkbox-btn" for="pick-up"><img src="icons/pick-up-icon.png"
+                alt="ikona pick-up-a">Pick-up
+              <input type="checkbox" value="pick-up" id="pick-up">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-znamka-model-tip">
+        <div class="header">
+          <h5>Znamka, model in tip</h5>
+        </div>
+        <div class="box-znamka-model-tip">
+          <div class="col-znamka">
+            <h6>Znamka</h6>
+            <select class="znamka-dropdown" name="znamka" id="znamka-dropdown">
+              <option value="Vse-znamke">Vse znamke</option>
+              <option value="0" disabled="disabled">- Najpopularnejše znamke</option>
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Citroen">Citroen</option>
+              <option value="Ford">Ford</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Opel">Opel</option>
+              <option value="Peugeot">Peugeot</option>
+              <option value="Renault">Renault</option>
+              <option value="Skoda">Škoda</option>
+              <option value="Volkswagen">Volkswagen</option>
+            </select>
+          </div>
+
+          <div class="col-model">
+            <h6>Model</h6>
+            <select class="model-dropdown" name="model" id="model-dropdown">
+              <option value="Izberite-model">Izberite model</option>
+            </select>
+          </div>
+          <div class="col-tip">
+            <h6>Tip</h6>
+            <input type="text" placeholder="katerikoli tip" maxlength="20">
+          </div>
+        </div>
+      </div>
+      <div class="container-cena-letnik-km">
+        <div class="header">
+          <h5>Cena, letnik, prevoženi km</h5>
+        </div>
+        <div class="box-cena">
+          <div class="col-cena-min">
+            <h6>Cena</h6>
+            <select class="cena-min-dropdown" name="cena-min">
+              <option value="od min.">od min.</option>
+              <option value="OD 100 EUR">od 100 EUR</option>
+              <option value="OD 500 EUR">od 500 EUR</option>
+              <option value="od 1.000 EUR">od 1.000 EUR</option>
+              <option value="od 1.500 EUR">od 1.500 EUR</option>
+              <option value="od 2.000 EUR">od 2.000 EUR</option>
+              <option value="od 3.000 EUR">od 3.000 EUR</option>
+              <option value="od 4.000 EUR">od 4.000 EUR</option>
+              <option value="od 5.000 EUR">od 5.000 EUR</option>
+              <option value="od 6.000 EUR">od 6.000 EUR</option>
+              <option value="od 7.000 EUR">od 7.000 EUR</option>
+              <option value="od 8.000 EUR">od 8.000 EUR</option>
+              <option value="od 9.000 EUR">od 9.000 EUR</option>
+              <option value="od 10.000 EUR">od 10.000 EUR</option>
+              <option value="od 11.000 EUR">od 11.000 EUR</option>
+              <option value="od 12.000 EUR">od 12.000 EUR</option>
+              <option value="od 13.000 EUR">od 13.000 EUR</option>
+              <option value="od 14.000 EUR">od 14.000 EUR</option>
+              <option value="od 15.000 EUR">od 15.000 EUR</option>
+              <option value="od 16.000 EUR">od 16.000 EUR</option>
+              <option value="od 17.000 EUR">od 17.000 EUR</option>
+              <option value="od 18.000 EUR">od 18.000 EUR</option>
+              <option value="od 19.000 EUR">od 19.000 EUR</option>
+              <option value="od 20.000 EUR">od 20.000 EUR</option>
+              <option value="od 22.500 EUR">od 22.500 EUR</option>
+              <option value="od 25.000 EUR">od 25.000 EUR</option>
+              <option value="od 27.500 EUR">od 27.500 EUR</option>
+              <option value="od 30.000 EUR">od 30.000 EUR</option>
+              <option value="od 35.000 EUR">od 35.000 EUR</option>
+              <option value="od 40.000 EUR">od 40.000 EUR</option>
+              <option value="od 45.000 EUR">od 45.000 EUR</option>
+              <option value="od 50.000 EUR">od 50.000 EUR</option>
+              <option value="od 60.000 EUR">od 60.000 EUR</option>
+              <option value="od 70.000 EUR">od 70.000 EUR</option>
+              <option value="od 80.000 EUR">od 80.000 EUR</option>
+              <option value="od 90.000 EUR">od 90.000 EUR</option>
+              <option value="od 100.000 EUR">od 100.000 EUR</option>
+            </select>
+          </div>
+          <div class="col-cena-max">
+            <select class="cena-max-dropdown" name="cena-max">
+              <option value="do max.">do max.</option>
+              <option value="do 100 EUR">do 100 EUR</option>
+              <option value="do 500 EUR">do 500 EUR</option>
+              <option value="do 1.000 EUR">do 1.000 EUR</option>
+              <option value="do 1.500 EUR">do 1.500 EUR</option>
+              <option value="do 2.000 EUR">do 2.000 EUR</option>
+              <option value="do 3.000 EUR">do 3.000 EUR</option>
+              <option value="do 4.000 EUR">do 4.000 EUR</option>
+              <option value="do 5.000 EUR">do 5.000 EUR</option>
+              <option value="do 6.000 EUR">do 6.000 EUR</option>
+              <option value="do 7.000 EUR">do 7.000 EUR</option>
+              <option value="do 8.000 EUR">do 8.000 EUR</option>
+              <option value="do 9.000 EUR">do 9.000 EUR</option>
+              <option value="do 10.000 EUR">do 10.000 EUR</option>
+              <option value="do 11.000 EUR">do 11.000 EUR</option>
+              <option value="do 12.000 EUR">do 12.000 EUR</option>
+              <option value="do 13.000 EUR">do 13.000 EUR</option>
+              <option value="do 14.000 EUR">do 14.000 EUR</option>
+              <option value="do 15.000 EUR">do 15.000 EUR</option>
+              <option value="do 16.000 EUR">do 16.000 EUR</option>
+              <option value="do 17.000 EUR">do 17.000 EUR</option>
+              <option value="do 18.000 EUR">do 18.000 EUR</option>
+              <option value="do 19.000 EUR">do 19.000 EUR</option>
+              <option value="do 20.000 EUR">do 20.000 EUR</option>
+              <option value="do 22.500 EUR">do 22.500 EUR</option>
+              <option value="do 25.000 EUR">do 25.000 EUR</option>
+              <option value="do 27.500 EUR">do 27.500 EUR</option>
+              <option value="do 30.000 EUR">do 30.000 EUR</option>
+              <option value="do 35.000 EUR">do 35.000 EUR</option>
+              <option value="do 40.000 EUR">do 40.000 EUR</option>
+              <option value="do 45.000 EUR">do 45.000 EUR</option>
+              <option value="do 50.000 EUR">do 50.000 EUR</option>
+              <option value="do 60.000 EUR">do 60.000 EUR</option>
+              <option value="do 70.000 EUR">do 70.000 EUR</option>
+              <option value="do 80.000 EUR">do 80.000 EUR</option>
+              <option value="do 90.000 EUR">do 90.000 EUR</option>
+              <option value="do 100.000 EUR">do 100.000 EUR</option>
+            </select>
+          </div>
+
+          <div class="col-cena-oglsi-brez-cene-check-btn">
+            <label class="custom-checkbox-btn" for="prikazi-oglase-brez-cene">prikaži oglase brez cene
+              <input type="checkbox" value="prikazi-oglase-brez-cene" id="prikazi-oglase-brez-cene" checked>
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-letnik">
+          <div class="col-letnik-min">
+            <h6>Letnik 1. registracije</h6>
+            <select class="letnik-min-dropdown" name="letnik-min">
+              <option value="od min.">od min.</option>
+              <option value="od 2024">od 2024</option>
+              <option value="od 2023">od 2023</option>
+              <option value="od 2022">od 2022</option>
+              <option value="od 2021">od 2021</option>
+              <option value="od 2020">od 2020</option>
+              <option value="od 2019">od 2019</option>
+              <option value="od 2018">od 2018</option>
+              <option value="od 2017">od 2017</option>
+              <option value="od 2016">od 2016</option>
+              <option value="od 2015">od 2015</option>
+              <option value="od 2014">od 2014</option>
+              <option value="od 2013">od 2013</option>
+              <option value="od 2012">od 2012</option>
+              <option value="od 2011">od 2011</option>
+              <option value="od 2010">od 2010</option>
+              <option value="od 2009">od 2009</option>
+              <option value="od 2008">od 2008</option>
+              <option value="od 2007">od 2007</option>
+              <option value="od 2006">od 2006</option>
+              <option value="od 2005">od 2005</option>
+              <option value="od 2004">od 2004</option>
+              <option value="od 2003">od 2003</option>
+              <option value="od 2002">od 2002</option>
+              <option value="od 2001">od 2001</option>
+              <option value="od 2000">od 2000</option>
+              <option value="od 1999">od 1999</option>
+              <option value="od 1998">od 1998</option>
+              <option value="od 1990">od 1990</option>
+              <option value="od 1985">od 1985</option>
+              <option value="od 1980">od 1980</option>
+              <option value="od 1975">od 1975</option>
+              <option value="od 1970">od 1970</option>
+            </select>
+          </div>
+          <div class="col-letnik-max">
+            <select class="letnik-max-dropdown" name="letnik-max">
+              <option value="do max.">do max.</option>
+              <option value="do 2024">do 2024</option>
+              <option value="do 2023">do 2023</option>
+              <option value="do 2022">do 2022</option>
+              <option value="do 2021">do 2021</option>
+              <option value="do 2020">do 2020</option>
+              <option value="do 2019">do 2019</option>
+              <option value="do 2018">do 2018</option>
+              <option value="do 2017">do 2017</option>
+              <option value="do 2016">do 2016</option>
+              <option value="do 2015">do 2015</option>
+              <option value="do 2014">do 2014</option>
+              <option value="do 2013">do 2013</option>
+              <option value="do 2012">do 2012</option>
+              <option value="do 2011">do 2011</option>
+              <option value="do 2010">do 2010</option>
+              <option value="do 2009">do 2009</option>
+              <option value="do 2008">do 2008</option>
+              <option value="do 2007">do 2007</option>
+              <option value="do 2006">do 2006</option>
+              <option value="do 2005">do 2005</option>
+              <option value="do 2004">do 2004</option>
+              <option value="do 2003">do 2003</option>
+              <option value="do 2002">do 2002</option>
+              <option value="do 2001">do 2001</option>
+              <option value="do 2000">do 2000</option>
+              <option value="do 1999">do 1999</option>
+              <option value="do 1998">do 1998</option>
+              <option value="do 1990">do 1990</option>
+              <option value="do 1985">do 1985</option>
+              <option value="do 1980">do 1980</option>
+              <option value="do 1975">do 1975</option>
+              <option value="do 1970">do 1970</option>
+            </select>
+          </div>
+
+          <div class="col-oldtimer-check-btn">
+            <label class="custom-checkbox-btn" for="oldtimer">oldtimer
+              <input type="checkbox" value="oldtimer" id="oldtimer">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-km">
+          <div class="col-km-min">
+            <h6>Prevoženi km</h6>
+            <select class="km-min-dropdown" name="km-min">
+              <option value="0">od min.</option>
+              <option value="5000">5000 km</option>
+              <option value="10000">10000 km</option>
+              <option value="20000">20000 km</option>
+              <option value="25000">25000 km</option>
+              <option value="50000">50000 km</option>
+              <option value="75000">75000 km</option>
+              <option value="100000">100000 km</option>
+              <option value="125000">125000 km</option>
+              <option value="150000">150000 km</option>
+              <option value="200000">200000 km</option>
+              <option value="250000">250000 km</option>
+            </select>
+          </div>
+          <div class="col-km-max">
+            <select class="km-max-dropdown" name="km-max">
+              <option value="do max.">do max.</option>
+              <option value="5000">5000 km</option>
+              <option value="10000">10000 km</option>
+              <option value="20000">20000 km</option>
+              <option value="25000">25000 km</option>
+              <option value="50000">50000 km</option>
+              <option value="75000">75000 km</option>
+              <option value="100000">100000 km</option>
+              <option value="125000">125000 km</option>
+              <option value="150000">150000 km</option>
+              <option value="200000">200000 km</option>
+              <option value="250000">250000 km</option>
+            </select>
+          </div>
+
+          <div class="col-garancija-check-btn">
+            <label class="custom-checkbox-btn" for="garancija">garancija / jamstvo
+              <input type="checkbox" value="garancija" id="garancija">
+              <span class="checkmark-2"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-gorivo-motor-menjalnik">
+        <div class="header">
+          <h5>Gorivo, Motor, menjalnik</h5>
+        </div>
+        <div class="box-gorivo-menjalnik">
+          <div class="col-gorivo">
+            <h6>Gorivo</h6>
+            <select class="gorivo-dropdown" name="gorivo">
+              <option value="katerokoli">katerokoli</option>
+              <option value="bencin">bencin</option>
+              <option value="dizel">dizel</option>
+              <option value="hibridni pogon">hibridni pogon</option>
+              <option value="e-pogon">e-pogon</option>
+              <option value="e-pogon">plin</option>
+            </select>
+          </div>
+          <div class="col-menjalnik">
+            <h6>Menjalnik</h6>
+            <select class="menjalnik-dropdown" name="menjalnik">
+              <option value="ni pomemben">ni pomemben</option>
+              <option value="ročni">ročni</option>
+              <option value="avtomatski">avtomatski</option>
+            </select>
+          </div>
+        </div>
+        <div class="box-prostornina-motorja">
+          <div class="col-prostornina-min">
+            <h6>Prostornina motorja ccm</h6>
+            <select class="prostornina-min-dropdown" name="prostornina-min">
+              <option value="od min.">od min.</option>
+              <option value="1000">1000</option>
+              <option value="1350">1350</option>
+              <option value="1800">1800</option>
+              <option value="2500">2500</option>
+              <option value="3000">3000</option>
+              <option value="4000">4000</option>
+            </select>
+          </div>
+          <div class="col-prostornina-max">
+            <select class="prostornina-max-dropdown" name="prostornina-max">
+              <option value="do max.">do max.</option>
+              <option value="1000">1000</option>
+              <option value="1350">1350</option>
+              <option value="1800">1800</option>
+              <option value="2500">2500</option>
+              <option value="3000">3000</option>
+              <option value="4000">4000</option>
+            </select>
+          </div>
+        </div>
+        <div class="box-moc-motorja">
+          <div class="col-moc-min">
+            <h6>Moč motorja</h6>
+            <select class="moc-min-dropdown" name="moc-min">
+              <option value="od min.">od min.</option>
+              <option value="44">44 kW (60 KM)</option>
+              <option value="55">55 kW (75 KM)</option>
+              <option value="66">66 kW (90 KM)</option>
+              <option value="74">74 kW (100 KM)</option>
+              <option value="85">85 kW (116 KM)</option>
+              <option value="96">96 kW (130 KM)</option>
+              <option value="110">110 kW (150 KM)</option>
+              <option value="147">147 kW (200 KM)</option>
+              <option value="184">184 kW (250 KM)</option>
+              <option value="220">220 kW (300 KM)</option>
+              <option value="0" disabled="disabled">po zavar.razredih:</option>
+              <option value="30">30 kW (40 KM)</option>
+              <option value="40">40 kW (54 KM)</option>
+              <option value="50">50 kW (67 KM)</option>
+              <option value="60">60 kW (80 KM)</option>
+              <option value="70">70 kW (94 KM)</option>
+              <option value="80">80 kW (107 KM)</option>
+              <option value="90">90 kW (121 KM)</option>
+              <option value="100">100 kW (134 KM)</option>
+              <option value="110">110 kW (147 KM)</option>
+              <option value="120">120 kW (161 KM)</option>
+              <option value="130">130 kW (174 KM)</option>
+              <option value="150">150 kW (201 KM)</option>
+              <option value="200">200 kW (268 KM)</option>
+              <option value="250">250 kW (335 KM)</option>
+              <option value="300">300 kW (402 KM)</option>
+            </select>
+          </div>
+          <div class="col-moc-max">
+            <select class="moc-max-dropdown" name="moc-max">
+              <option value="do max.">do max.</option>
+              <option value="44">44 kW (60 KM)</option>
+              <option value="55">55 kW (75 KM)</option>
+              <option value="66">66 kW (90 KM)</option>
+              <option value="74">74 kW (100 KM)</option>
+              <option value="85">85 kW (116 KM)</option>
+              <option value="96">96 kW (130 KM)</option>
+              <option value="110">110 kW (150 KM)</option>
+              <option value="147">147 kW (200 KM)</option>
+              <option value="184">184 kW (250 KM)</option>
+              <option value="220">220 kW (300 KM)</option>
+              <option value="0" disabled="disabled">po zavar.razredih:</option>
+              <option value="30">30 kW (40 KM)</option>
+              <option value="40">40 kW (54 KM)</option>
+              <option value="50">50 kW (67 KM)</option>
+              <option value="60">60 kW (80 KM)</option>
+              <option value="70">70 kW (94 KM)</option>
+              <option value="80">80 kW (107 KM)</option>
+              <option value="90">90 kW (121 KM)</option>
+              <option value="100">100 kW (134 KM)</option>
+              <option value="110">110 kW (147 KM)</option>
+              <option value="120">120 kW (161 KM)</option>
+              <option value="130">130 kW (174 KM)</option>
+              <option value="150">150 kW (201 KM)</option>
+              <option value="200">200 kW (268 KM)</option>
+              <option value="250">250 kW (335 KM)</option>
+              <option value="300">300 kW (402 KM)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container-st-vrat-sedezev">
+        <div class="header">
+          <h5>Število vrat in sedežev</h5>
+        </div>
+        <div class="box-stevilo-vrat-sedezev">
+          <div class="col-stevilo-vrat">
+            <h6>Število vrat</h6>
+            <select class="stevilo-vrat-dropdown" name="stevilo-vrat">
+              <option value="ni pomembno">ni pomembno</option>
+              <option value="2 / 3">2 / 3</option>
+              <option value="4 / 5">4 / 5</option>
+              <option value="6 / 7">6 / 7</option>
+            </select>
+          </div>
+          <div class="col-stevilo-sedezev">
+            <h6>Število sedežev</h6>
+            <select class="stevilo-sedezev-dropdown" name="stevilo-sedezev">
+              <option value="ni pomembeno">ni pomembeno</option>
+              <option value="2 sedeza">2 sedeža</option>
+              <option value="3 - 5 sedezev">3 - 5 sedežev</option>
+              <option value="4 sedezi">4 sedeži</option>
+              <option value="5 sedezev">5 sedežev</option>
+              <option value="6 ali vec sedezev">6 ali več sedežev</option>
+              <option value="7 sedezev">7 sedežev</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container-barva-zunanjosti">
+        <div class="header">
+          <h5>Barva zunanjosti</h5>
+        </div>
+        <div class="box-barva-1">
+          <div class="col-katerakoli">
+            <label class="custom-checkbox-btn" for="katerakoli">katerakoli
+              <input type="checkbox" value="katerakoli" id="katerakoli" checked>
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-bela">
+            <label class="custom-checkbox-btn" for="bela">bela
+              <input type="checkbox" value="bela" id="bela">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-crna">
+            <label class="custom-checkbox-btn" for="crna">crna
+              <input type="checkbox" value="crna" id="crna">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-barva-2">
+          <div class="col-srebrna">
+            <label class="custom-checkbox-btn" for="srebrna">srebrna
+              <input type="checkbox" value="srebrna" id="srebrna">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-modra">
+            <label class="custom-checkbox-btn" for="modra">modra
+              <input type="checkbox" value="modra" id="modra">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-siva">
+            <label class="custom-checkbox-btn" for="siva">siva
+              <input type="checkbox" value="siva" id="siva">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+        </div>
+        <div class="box-barva-3">
+          <div class="col-rumena">
+            <label class="custom-checkbox-btn" for="rumena">rumena
+              <input type="checkbox" value="rumena" id="rumena">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-rdeca">
+            <label class="custom-checkbox-btn" for="rdeca">rdeča
+              <input type="checkbox" value="rdeca" id="rdeca">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+          <div class="col-zelena">
+            <label class="custom-checkbox-btn" for="zelena">zelena
+              <input type="checkbox" value="zelena" id="zelena">
+              <span class="checkmark-3"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-stanje-vozila">
+        <div class="header">
+          <h5>Stanje vozila</h5>
+        </div>
+        <div class="box-stanje-vozila">
+          <div class="col-prikaz-karamboliranih">
+            <h6>Karambolirana vozila</h6>
+            <select class="prikaz-karamboliranih-dropdown" name="prikaz-karamboliranih">
+              <option value="0">ne prikaži</option>
+              <option value="1">tudi prikaži</option>
+              <option value="2">samo v okvari</option>
+              <option value="3">samo poškodovana</option>
+              <option value="5">samo karambolirana</option>
+              <option value="4">vsa nebrezhibna vozila</option>
+            </select>
+          </div>
+          <div class="col-poplavljena-vozila">
+            <h6>Poplavljena vozila</h6>
+            <select class="poplavljena-vozila-dropdown" name="poplavljena-vozila">
+              <option value="tudi prikazi">tudi prikaži</option>
+              <option value="ne prikazi">ne prikaži</option>
+              <option value="prikazi samo vozila, ki so bila poplavljena">prikaži samo vozila, ki so bila poplavljena
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container-starost-oglasa-prodajalec">
+        <div class="header">
+          <h5>Starost oglasa, prodajalec</h5>
+        </div>
+        <div class="box-starost-oglasa-prodajalec">
+          <div class="col-oglas-objavljen">
+            <h6>Oglas objavljen</h6>
+            <select class="oglas-objavljen-dropdown" name="oglas-objavljen">
+              <option value="kadarkoli">kadarkoli</option>
+              <option value="danes">danes</option>
+              <option value="zadnjih 24 ur">zadnjih 24 ur</option>
+              <option value="zadnje 3 dni">zadnje 3 dni</option>
+              <option value="v zadnjem tednu">v zadnjem tednu</option>
+            </select>
+          </div>
+          <div class="col-prodajalec-je">
+            <h6>Prodajalec je</h6>
+            <select class="prodajalec-je-dropdown" name="prodajalec-je">
+              <option value="trgovec ali fizicna oseba">trgovec ali fizična oseba</option>
+              <option value="fizicna oseba">fizična oseba</option>
+              <option value="trgovec">trgovec</option>
+            </select>
+          </div>
+          <div class="col-lokacija-posta">
+            <h6>Lokacija / pošta</h6>
+            <select class="lokacija-posta-dropdown" name="lokacija-posta">
+              <option value="0">kjerkoli</option>
+              <option value="1">1000 - LJ z okolico</option>
+              <option value="2">2000 - MB z okolico</option>
+              <option value="3">3000 - CE z okolico</option>
+              <option value="4">4000 - KR z okolico</option>
+              <option value="5">5000 - GO z okolico</option>
+              <option value="6">6000 - KP z okolico</option>
+              <option value="8">8000 - NM z okolico</option>
+              <option value="9">9000 - MS z okolico</option>
+              <option value="100">samo Slovenija / brez tujine</option>
+              <option value="99">samo tujina / brez Slovenije</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container-button-iskanje-vozil">
+        <div class="box-button-iskanje-vozil">
+          <div class="col-button-iskanje-vozil">
+            <input type="submit" value="Iskanje vozil">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="javaScript/sweetalert.js"></script>
+
+  <script src="javaScript/znamka-model-dropdown.js"></script>
+
+
+</body>
+
+</html>

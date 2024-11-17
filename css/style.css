@@ -1,0 +1,770 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background-image: url(../images/avtonet-background4.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+html,
+body {
+  height: 100%;
+  width: 80.5%;
+  margin: 90px auto;
+  overflow: initial;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/*custom radio button css*/
+/* The container */
+.custom-radio-btn {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.custom-radio-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #dfdcdc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+.custom-radio-btn input:checked~.checkmark-1 {
+  background-color: rgb(244, 122, 32);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark-1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.custom-radio-btn input:checked~.checkmark-1:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.custom-radio-btn .checkmark-1:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/*end of custom radio button css*/
+
+/*custom checkbox button css*/
+.custom-checkbox-btn {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-2 {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid #dfdcdc;
+}
+
+.checkmark-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid #dfdcdc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox-btn input:checked~.checkmark-2,
+.custom-checkbox-btn input:checked~.checkmark-3 {
+  background-color: rgb(244, 122, 32);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-2:after,
+.checkmark-3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox-btn input:checked~.checkmark-2:after,
+.custom-checkbox-btn input:checked~.checkmark-3:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox-btn .checkmark-2:after,
+.custom-checkbox-btn .checkmark-3:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*end of css for custom check button*/
+
+.header {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0 0 14px;
+  border-bottom: 1px solid rgb(207, 204, 204);
+  line-height: 30px;
+}
+
+.container-tip-ponudbe {
+  height: 90px;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-tip-ponudbe,
+.box-starost {
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.col-prodaja,
+.col-najem {
+  height: 100%;
+  width: 35%;
+  padding-left: 20px;
+}
+
+.container-starost {
+  height: 90px;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.col-novo,
+.col-testno,
+.col-rabljeno {
+  height: 100%;
+  width: 29%;
+  padding-left: 20px;
+}
+
+.container-karoserijska-izvedba {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-karoserijska-izvedba-1,
+.box-karoserijska-izvedba-2,
+.box-karoserijska-izvedba-3 {
+  height: fit-content;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.col-limuzina,
+.col-kombilimuzina,
+.col-karavan,
+.col-enoprostorec,
+.col-coupe,
+.col-cabrio {
+  height: fit-content;
+  width: 29%;
+  padding-left: 20px;
+}
+
+.col-suv,
+.col-pick-up {
+  height: 100%;
+  width: 29%;
+  padding-left: 20px;
+}
+
+.container-karoserijska-izvedba img {
+  height: 25px;
+  padding-right: 10px;
+  position: relative;
+  top: 8px;
+}
+
+/*media query za tip ponudbe in starost*/
+@media (max-width:737px) {
+  .container-tip-ponudbe {
+    height: 120px;
+  }
+
+  .box-tip-ponudbe {
+    display: block;
+  }
+
+  .col-prodaja,
+  .col-najem {
+    width: 100%;
+  }
+
+  .container-starost {
+    height: 140px;
+  }
+
+  .box-starost {
+    height: 30px;
+    width: 100%;
+    display: block;
+  }
+
+  .col-novo,
+  .col-testno,
+  .col-rabljeno {
+    width: 100%;
+  }
+}
+
+/*media query za karoserijsko izvedbo*/
+@media (max-width: 1013px) {
+  .container-karoserijska-izvedba {
+    height: fit-content;
+  }
+
+  .box-karoserijska-izvedba-1,
+  .box-karoserijska-izvedba-2,
+  .box-karoserijska-izvedba-3 {
+    display: block;
+  }
+
+  .col-limuzina,
+  .col-kombilimuzina,
+  .col-karavan,
+  .col-enoprostorec,
+  .col-coupe,
+  .col-cabrio {
+    width: 100%;
+  }
+
+  .col-suv,
+  .col-pick-up {
+    width: 100%;
+  }
+}
+
+.container-znamka-model-tip {
+  height: 100px;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-znamka-model-tip {
+  height: 60px;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.col-znamka,
+.col-model,
+.col-tip {
+  height: 100%;
+  width: 29%;
+  padding-left: 20px;
+}
+
+h6 {
+  line-height: 14px;
+  font-size: 14px;
+}
+
+select.znamka-dropdown,
+select.model-dropdown {
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+}
+
+.col-tip input[type="text"] {
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+  padding-left: 3px;
+}
+
+@media (max-width:728px) {
+  .container-znamka-model-tip {
+    height: 230px;
+  }
+
+  .box-znamka-model-tip {
+    display: block;
+  }
+
+  .col-znamka,
+  .col-model {
+    width: 90%;
+  }
+
+  .col-tip {
+    width: 89%;
+  }
+}
+
+.container-cena-letnik-km {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-cena,
+.box-letnik,
+.box-km {
+  height: 60px;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.col-cena-min,
+.col-letnik-min,
+.col-km-min {
+  height: 60px;
+  width: 30%;
+  padding-left: 20px;
+}
+
+.col-cena-max,
+.col-cena-oglsi-brez-cene-check-btn,
+.col-letnik-max,
+.col-oldtimer-check-btn,
+.col-km-max,
+.col-garancija-check-btn {
+  height: 46px;
+  width: 30%;
+  padding-top: 14px;
+}
+
+.col-cena-oglsi-brez-cene-check-btn,
+.col-oldtimer-check-btn,
+.col-garancija-check-btn {
+  padding-top: 13px;
+  padding-left: 15px;
+}
+
+select.cena-min-dropdown,
+select.cena-max-dropdown,
+select.letnik-min-dropdown,
+select.letnik-max-dropdown,
+select.km-min-dropdown,
+select.km-max-dropdown {
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+}
+
+select.cena-min-dropdown,
+select.letnik-min-dropdown,
+select.km-min-dropdown,
+select.prostornina-min-dropdown,
+select.moc-min-dropdown {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+select.cena-max-dropdown,
+select.letnik-max-dropdown,
+select.km-max-dropdown,
+select.prostornina-max-dropdown,
+select.moc-max-dropdown {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@media (max-width:973px) {
+
+  .box-cena,
+  .box-letnik,
+  .box-km {
+    height: fit-content;
+    display: block;
+  }
+
+  .col-cena-min,
+  .col-letnik-min,
+  .col-km-min {
+    height: fit-content;
+    width: 90%;
+  }
+
+  .col-cena-max,
+  .col-cena-oglsi-brez-cene-check-btn,
+  .col-letnik-max,
+  .col-oldtimer-check-btn,
+  .col-km-max,
+  .col-garancija-check-btn {
+    height: fit-content;
+    width: 90%;
+    padding-left: 20px;
+  }
+
+  select.cena-min-dropdown,
+  select.letnik-min-dropdown,
+  select.km-min-dropdown,
+  select.cena-max-dropdown,
+  select.letnik-max-dropdown,
+  select.km-max-dropdown {
+    border-radius: 3px;
+  }
+
+}
+
+.container-gorivo-motor-menjalnik {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-gorivo-menjalnik,
+.box-prostornina-motorja,
+.box-moc-motorja {
+  height: 60px;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.col-gorivo,
+.col-menjalnik {
+  height: 60px;
+  width: 30%;
+  padding-left: 20px;
+}
+
+.col-prostornina-min,
+.col-moc-min {
+  height: 60px;
+  width: 31.1%;
+  padding-left: 20px;
+}
+
+.col-prostornina-max,
+.col-moc-max {
+  height: 46px;
+  width: 31.1%;
+  padding-top: 14px;
+}
+
+select.gorivo-dropdown,
+select.menjalnik-dropdown {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+  border-radius: 3px;
+}
+
+select.prostornina-min-dropdown,
+select.prostornina-max-dropdown,
+select.moc-min-dropdown,
+select.moc-max-dropdown {
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+}
+
+@media (max-width: 838px) {
+
+  .box-gorivo-menjalnik,
+  .box-prostornina-motorja,
+  .box-moc-motorja {
+    height: fit-content;
+    display: block;
+  }
+
+  .col-prostornina-min,
+  .col-moc-min {
+    height: 50px;
+    padding-top: 10px;
+    width: 90%;
+  }
+
+  .col-prostornina-max,
+  .col-moc-max {
+    height: 50px;
+    width: 90%;
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+  .col-gorivo,
+  .col-menjalnik {
+    width: 90%;
+  }
+
+}
+
+.container-st-vrat-sedezev,
+.container-stanje-vozila,
+.container-starost-oglasa-prodajalec {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.container-starost-oglasa-prodajalec {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.box-stevilo-vrat-sedezev,
+.box-stanje-vozila,
+.box-starost-oglasa-prodajalec {
+  height: 60px;
+  line-height: 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.col-stevilo-vrat,
+.col-stevilo-sedezev,
+.col-prikaz-karamboliranih,
+.col-poplavljena-vozila,
+.col-oglas-objavljen,
+.col-prodajalec-je,
+.col-lokacija-posta {
+  height: 60px;
+  width: 30%;
+  padding-left: 20px;
+}
+
+select.stevilo-vrat-dropdown,
+select.stevilo-sedezev-dropdown,
+select.prikaz-karamboliranih-dropdown,
+select.poplavljena-vozila-dropdown,
+select.oglas-objavljen-dropdown,
+select.prodajalec-je-dropdown,
+select.lokacija-posta-dropdown {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #dfdcdc;
+  color: rgb(114, 112, 112);
+  border-radius: 3px;
+}
+
+@media (max-width:555px) {
+
+  .box-stevilo-vrat-sedezev,
+  .box-stanje-vozila {
+    height: fit-content;
+    display: block;
+  }
+
+  .col-stevilo-vrat,
+  .col-stevilo-sedezev,
+  .col-prikaz-karamboliranih,
+  .col-poplavljena-vozila {
+    width: 90%;
+  }
+}
+
+@media (max-width:942px) {
+  .box-starost-oglasa-prodajalec {
+    height: fit-content;
+    display: block;
+  }
+
+  .col-oglas-objavljen,
+  .col-prodajalec-je,
+  .col-lokacija-posta {
+    width: 90%;
+  }
+}
+
+.container-barva-zunanjosti {
+  height: fit-content;
+  width: 100%;
+  border: 1px solid rgb(207, 204, 204);
+  padding: 7px 14px;
+  margin-bottom: 7px;
+  background-color: white;
+}
+
+.box-barva-1,
+.box-barva-2,
+.box-barva-3 {
+  height: fit-content;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.col-katerakoli,
+.col-bela,
+.col-crna,
+.col-srebrna,
+.col-modra,
+.col-siva,
+.col-rumena,
+.col-rdeca,
+.col-zelena {
+  height: fit-content;
+  width: 29%;
+  padding-left: 20px;
+}
+
+@media (max-width:730px) {
+  .container-barva-zunanjosti {
+    height: fit-content;
+  }
+
+  .box-barva-1,
+  .box-barva-2,
+  .box-barva-3 {
+    display: block;
+  }
+
+  .col-katerakoli,
+  .col-bela,
+  .col-crna,
+  .col-srebrna,
+  .col-modra,
+  .col-siva,
+  .col-rumena,
+  .col-rdeca,
+  .col-zelena {
+    width: 100%;
+  }
+}
+
+input[type=submit] {
+  margin: 10px 10px 70px 10px;
+  height: 48px;
+  width: 100%;
+  padding-left: 25px;
+  background-color: rgb(244, 122, 32);
+  border: transparent;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease-out 0.3s;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(7, 47, 87);
+}
